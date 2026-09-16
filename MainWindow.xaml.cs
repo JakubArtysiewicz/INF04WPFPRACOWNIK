@@ -20,5 +20,6 @@ namespace INF04WPFPRACOWNIK
         {
             InitializeComponent();
         }
+
     }
 }

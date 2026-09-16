@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:INF04WPFPRACOWNIK"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Dodaj pracownika" Height="450" Width="800"
+        Background="#B0C4DE">
+    <Grid Margin="0,139,361,0">
+        <GroupBox Header="Dane pracownika" Margin="96,-56,95,147" BorderBrush="White" >
+            <Grid>
+                <TextBox HorizontalAlignment="Left" Margin="92,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Margin="92,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBlock HorizontalAlignment="Left" Margin="21,42,0,0" TextWrapping="Wrap" Text="Imię" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="21,78,0,0" TextWrapping="Wrap" Text="Nazwisko" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="21,114,0,0" TextWrapping="Wrap" Text="Stanowisko" VerticalAlignment="Top"/>
+                <ComboBox HorizontalAlignment="Left" Margin="92,111,0,0" VerticalAlignment="Top" Width="120">
+                    <ComboBoxItem Content="Kierownik"/>
+                    <ComboBoxItem Content="Starszy programista"/>
+                    <ComboBoxItem Content="Młodszy programista"/>
+                    <ComboBoxItem Content="Tester"/>
+                </ComboBox>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Generowanie hasła" Margin="440,-56,-249,147" BorderBrush="White" RenderTransformOrigin="0.458,0.518"/>
 
     </Grid>
 </Window>

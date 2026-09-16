@@ -7,15 +7,15 @@
         mc:Ignorable="d"
         Title="Dodaj pracownika" Height="450" Width="800"
         Background="#B0C4DE">
-    <Grid Margin="0,139,361,0">
-        <GroupBox Header="Dane pracownika" Margin="96,-56,95,147" BorderBrush="White" >
-            <Grid>
-                <TextBox HorizontalAlignment="Left" Margin="92,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Margin="92,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+    <Grid Margin="0,139,337,0">
+        <GroupBox Header="Dane pracownika" Margin="96,-56,97,131" BorderBrush="White" >
+            <Grid Height="194">
+                <TextBox x:Name="Imie" HorizontalAlignment="Left" Margin="92,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="Nazwisko" HorizontalAlignment="Left" Margin="92,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                 <TextBlock HorizontalAlignment="Left" Margin="21,42,0,0" TextWrapping="Wrap" Text="Imię" VerticalAlignment="Top"/>
                 <TextBlock HorizontalAlignment="Left" Margin="21,78,0,0" TextWrapping="Wrap" Text="Nazwisko" VerticalAlignment="Top"/>
                 <TextBlock HorizontalAlignment="Left" Margin="21,114,0,0" TextWrapping="Wrap" Text="Stanowisko" VerticalAlignment="Top"/>
-                <ComboBox HorizontalAlignment="Left" Margin="92,111,0,0" VerticalAlignment="Top" Width="120">
+                <ComboBox x:Name="Stanowisko" HorizontalAlignment="Left" Margin="92,111,0,0" VerticalAlignment="Top" Width="120">
                     <ComboBoxItem Content="Kierownik"/>
                     <ComboBoxItem Content="Starszy programista"/>
                     <ComboBoxItem Content="Młodszy programista"/>
@@ -24,7 +24,17 @@
 
             </Grid>
         </GroupBox>
-        <GroupBox Header="Generowanie hasła" Margin="440,-56,-249,147" BorderBrush="White" RenderTransformOrigin="0.458,0.518"/>
+        <GroupBox Header="Generowanie hasła" Margin="440,-56,-249,131" BorderBrush="White" RenderTransformOrigin="0.458,0.518">
+            <Grid Height="204">
+                <TextBlock HorizontalAlignment="Left" Margin="33,42,0,0" TextWrapping="Wrap" Text="Ile znaków" VerticalAlignment="Top" RenderTransformOrigin="-0.024,-0.289"/>
+                <TextBox x:Name="IloscZnakow" HorizontalAlignment="Left" Margin="106,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <CheckBox x:Name="MaleiWielkie" Content="Małe i wielkie litery" HorizontalAlignment="Left" Margin="33,75,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                <CheckBox x:Name="Cyfry" Content="Cyfry" HorizontalAlignment="Left" Margin="33,95,0,0" VerticalAlignment="Top"/>
+                <CheckBox x:Name="Specjalne" Content="Znaki specjalne" HorizontalAlignment="Left" Margin="33,115,0,0" VerticalAlignment="Top"/>
+                <Button Click="Generuj_Click" Content="Generuj hasło" Foreground="White" Background="#4682B4" HorizontalAlignment="Center" Margin="0,151,0,0" VerticalAlignment="Top" Width="92"/>
+            </Grid>
+        </GroupBox>
+        <Button Click="Zatwierdz_Click" Content="Zatwierdz" Foreground="White" Background="#4682B4" HorizontalAlignment="Left" Margin="355,190,0,0" VerticalAlignment="Top" Height="32" Width="98"/>
 
     </Grid>
 </Window>
